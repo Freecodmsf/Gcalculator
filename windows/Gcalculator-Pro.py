@@ -22,7 +22,7 @@ if (pas == 2015):
     o = 0
     nc = 1
     while (o == 0):
-        op = int(input(Fore.YELLOW + "Enter your choice:\n1.power calculation                               11.Unit convertor (meter)\n2.multiplication                                  12.Unit convertor (litre)\n3.division                                        13.Unit Converter (gram)\n4.addition                                        14.Area finder(2D)\n5.subtaction                                      15.volume finder(3D)\n6.division (remainder)\n7.root finder\n8.division (divident)\n9.division (divisor)\n10.division (divisor with remainder)\n----------------> "))
+        op = int(input(Fore.YELLOW + "Enter your choice:\n1.power calculation                               11.Unit convertor (meter)\n2.multiplication                                  12.Unit convertor (litre)\n3.division                                        13.Unit Converter (gram)\n4.addition                                        14.Area finder(2D)\n5.subtaction                                      15.volume finder(3D)\n6.division (remainder)                            16.Temperature convertor\n7.root finder\n8.division (divident)\n9.division (divisor)\n10.division (divisor with remainder)\n----------------> "))
         print("\n\n")
         if (op == 1):
             print("                                                   Session --",nc,"                                  ")
@@ -984,6 +984,38 @@ if (pas == 2015):
                 v = float(pie*(r**2)*h + (4/3)*pie*(r**3))
                 nc = nc + 1
                 print("The answer is",v,"\n\n                                                    Session --",nc,"                                 ")
+        elif (op == 16):
+            t = int(input("Enter your choice: \n1.Celsius --> Fahrenheit            3.Fahrenheit --> Celsius           5.Kelvin --> Celsius\n2.Celsius --> Kelvin                4.Fahrenheit --> Kelvin            6.Kelvin --> Fahrenheit\n\n----------------->"))
+            if (t == 1):
+                c = float(input("Enter the temperature: "))
+                f = float(c*(9/5) + 32)
+                nc = nc + 1
+                print("The answer is",f,"°F\n\n                                                    Session --",nc,"                                 ")
+            elif (t == 2):
+                c = float(input("Enter the temperature: "))
+                f = float(c + 273.15)
+                nc = nc + 1
+                print("The answer is",f,"K\n\n                                                    Session --",nc,"                                 ")
+            elif (t == 3):
+                c = float(input("Enter the temperature: "))
+                f = float((c - 32)*5/9)
+                nc = nc + 1
+                print("The answer is",f,"°C\n\n                                                    Session --",nc,"                                 ")
+            elif (t == 4):
+                c = float(input("Enter the temperature: "))
+                f = float(((c - 32)*5/9) + 273.15)
+                nc = nc + 1
+                print("The answer is",f,"K\n\n                                                    Session --",nc,"                                 ")
+            elif (t == 5):
+                c = float(input("Enter the temperature: "))
+                f = float(c - 273.15)
+                nc = nc + 1
+                print("The answer is",f,"°C\n\n                                                    Session --",nc,"                                 ")
+            elif (t == 6):
+                c = float(input("Enter the temperature: "))
+                f = float((c - 273.15) * (9/5) + 32)
+                nc = nc + 1
+                print("The answer is",f,"°F\n\n                                                    Session --",nc,"                                 ")
 else:
     print(Fore.RED + "!!Wrong password!!")
 print(Fore.WHITE + " ")
